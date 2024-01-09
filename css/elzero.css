@@ -10,6 +10,7 @@
 /* start Global Rules */
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -58,12 +59,20 @@ a {
 .header {
   background-color: white;
   box-shadow: 0 0 10px #ddd;
+  -webkit-box-shadow: 0 0 10px #ddd;
   position: relative;
 }
 .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
 }
@@ -72,8 +81,14 @@ a {
   font-size: 26px;
   font-weight: bold;
   height: var(--header-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 @media (max-width: 767px) {
@@ -83,26 +98,36 @@ a {
   }
 }
 .header .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 767px) {
-  .main-nav{
+  .main-nav {
     margin: auto;
   }
 }
 .header .main-nav > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: var(--header-height);
   position: relative;
   color: black;
   padding: 0 30px;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
   overflow: hidden;
 }
-@media (max-width: 767px){
-  .header .main-nav > li > a{
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
     padding: 10px;
     font-size: 14px;
     height: 40px;
@@ -116,6 +141,8 @@ a {
   background-color: var(--main-color);
   top: 0;
   left: -100%;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .header .main-nav > li > a:hover {
