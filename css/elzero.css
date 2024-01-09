@@ -641,6 +641,8 @@ a {
   border-style: solid;
   border-width: 0 0 170px 500px;
   border-color: transparent transparent white transparent;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .features .box:hover .img-holder::after {
@@ -653,6 +655,8 @@ a {
   position: relative;
   font-size: 40px;
   margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .features .box h2::after {
@@ -673,12 +677,16 @@ a {
 .features .box a {
   display: block;
   border: 2px solid transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 30px;
   font-weight: bold;
   font-size: 22px;
   padding: 10px 30px;
   border-radius: 6px;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .features .quality .img-holder::before {
@@ -690,6 +698,8 @@ a {
 .features .quality a {
   color: var(--feat-quality-col);
   border-color: var(--feat-quality-col);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--feat-quality-col)), color-stop(50%, white));
+  background: -o-linear-gradient(left, var(--feat-quality-col) 50%, white 50%);
   background: linear-gradient(to right, var(--feat-quality-col) 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -703,6 +713,8 @@ a {
 .features .time a {
   color: var(--feat-time-col);
   border-color: var(--feat-time-col);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--feat-time-col)), color-stop(50%, white));
+  background: -o-linear-gradient(left, var(--feat-time-col) 50%, white 50%);
   background: linear-gradient(to right, var(--feat-time-col) 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
@@ -716,6 +728,8 @@ a {
 .features .passion a {
   color: var(--feat-passion-col);
   border-color: var(--feat-passion-col);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--feat-passion-col)), color-stop(50%, white));
+  background: -o-linear-gradient(left, var(--feat-passion-col) 50%, white 50%);
   background: linear-gradient(to right, var(--feat-passion-col) 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
