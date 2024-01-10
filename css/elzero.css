@@ -829,6 +829,8 @@ a {
   top: 0;
   height: 100%;
   border-radius: 10px;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .team .box::before {
@@ -843,45 +845,68 @@ a {
 .team .box:hover::after {
   width: calc(100% - 60px);
 }
-@media (max-width:767px){
-  .team .box::before,.team .box:hover::after{
+@media (max-width: 767px) {
+  .team .box::before,
+  .team .box:hover::after {
     width: 100%;
   }
 }
 .team .box .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 60px;
 }
 .team .box .data img {
   width: calc(100% - 60px);
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
   border-radius: 10px;
 }
-@media (max-width:767px){
-  .team .box .data img{
+@media (max-width: 767px) {
+  .team .box .data img {
     margin-left: 20px;
   }
 }
 .team .box:hover .data img {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 .team .box .data .social {
   width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
 }
 .team .box .data .social a {
   width: 60px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .team .box .data .social i {
   color: #777;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .team .box .data .social a:hover i {
@@ -890,8 +915,8 @@ a {
 .team .box .info {
   padding-left: 80px;
 }
-@media (max-width:767px){
-  .team .box .info{
+@media (max-width: 767px) {
+  .team .box .info {
     padding-left: 0;
     text-align: center;
     margin-top: 13px;
@@ -901,6 +926,8 @@ a {
   margin-bottom: 0;
   color: var(--main-color);
   font-size: 22px;
+  -webkit-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
 }
 .team .box .info p {
@@ -911,4 +938,3 @@ a {
   color: #777;
 }
 /* End Team Members */
-
