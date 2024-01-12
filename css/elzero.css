@@ -1119,6 +1119,9 @@ a {
   left: 0;
   top: 0px;
   height: 100%;
+  -webkit-transition:  width var(--main-transition-duration) linear;
+  -o-transition:  width var(--main-transition-duration) linear;
+  transition: width var(--main-transition-duration) linear;
 }
 /* End Skills */
 /* Start Work Steps  */
