@@ -39,12 +39,37 @@ let counter = setInterval(() => {
 let section = document.querySelector(".our-skills");
 let progressSpans = document.querySelectorAll(".the-progress span");
 
+// ************* start animate the numbers after scroll in stats section**************
+
+let statsSection = document.querySelector(".stats");
+let nums = document.querySelectorAll(".stats .number");
+let started = false; // Function started ? No
+
 window.onscroll = function () {
   if (window.scrollY >= section.offsetTop - 250) {
     progressSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
   }
+  // Stats Section
+  if (window.scrollY >= statsSection.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => {
+        startCount(num);
+      });
+    }
+    started = true;
+  }
 };
 
 
+function startCount(element) {
+  // select the number of the span that i but in a data-goal
+  let goal = element.dataset.goal;
+  let count = setInterval(() => {
+    element.textContent++;
+    if (element.textContent == goal) {
+      clearInterval(count);
+    }
+  }, (2000 / goal));
+}
